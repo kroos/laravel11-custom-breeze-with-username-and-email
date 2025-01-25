@@ -17,7 +17,7 @@ $currentYear = Carbon::now()->year;
 	<!-- <title>Laravel11 Boilerplate</title> -->
 	<title>{{ config('app.name', 'Laravel') }}</title>
 
-	<link href="{{ asset('images/logo.png') }}" type="image/x-icon" rel="icon" />
+	<link href="" type="image/x-icon" rel="icon" />
 
 	<!-- Styles -->
 	<link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
@@ -46,16 +46,16 @@ $currentYear = Carbon::now()->year;
 	</div>
 
 </body>
-<!-- <script type="module" src="{{ asset('js/fullcalendar/bootstrap5/index.global.js') }}"></script> -->
-<!-- <script type="module" src="{{ asset('js/fullcalendar/daygrid/index.global.js') }}"></script> -->
-<!-- <script type="module" src="{{ asset('js/fullcalendar/multimonth/index.global.js') }}"></script> -->
 <script src="{{ asset('js/fullcalendar/index.global.js') }}"></script>
-<!-- <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script> -->
-<!-- <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script> -->
-<script src="{{ asset('js/chartjs/chart.umd.js') }}"></script>
+
+<script src="{{ asset('js/chart.js/dist/chart.umd.js') }}"></script>
+
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
+
+<!-- <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script> -->
 <script >
 	jQuery.noConflict ();
 	(function($){

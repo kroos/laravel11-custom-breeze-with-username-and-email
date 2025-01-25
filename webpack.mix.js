@@ -23,5 +23,4 @@ mix.js('resources/js/app.js', 'public/js/app.js')
 	//	'./node_modules/select2-theme-bootstrap5/dist/select2-bootstrap.css',
 	//	], 'public/css/app.css')
 	// .setPublicPath('public/)
-	.sourceMaps()
-;
+	.sourceMaps();

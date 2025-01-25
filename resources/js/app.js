@@ -34,8 +34,10 @@ try {
 	require('datatables.net-fixedheader-bs5');
 	require('datatables.net-responsive-bs5');
 
-	// these are different breed of javascript which previously compatible with jquery... hareyyyyy
-	// require('fullcalendar');
+	// fullcalendar
+	require('./calendar');
+
+	// ChartJS
 	// require('chart.js');
 
 	require('../../node_modules/jquery-ui/dist/jquery-ui');
