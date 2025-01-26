@@ -1,5 +1,4 @@
 /.phpunit.cache
-/.phpintel
 /node_modules
 /public/build
 /public/hot
@@ -22,3 +21,11 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/public/js/fullcalendar
+/public/js/chart.js
+/public/js/app.js
+/public/js
+/public/css/app.css
+/public/css
+/public/fonts
+/public/images
