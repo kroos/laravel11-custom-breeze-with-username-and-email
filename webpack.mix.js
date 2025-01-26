@@ -15,7 +15,7 @@ mix.webpackConfig({
 mix.js('resources/js/app.js', 'public/js/app.js')
 	.postCss('resources/css/app.css', 'public/css/app.css', [
 		require('postcss-custom-properties'),
-		require('tailwindcss'),
+		// require('@tailwindcss/postcss'),
 	])
 	// .sass('resources/scss/app.scss', 'public/css/app.css')
 	// .scripts([
