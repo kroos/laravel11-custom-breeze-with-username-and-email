@@ -1,6 +1,7 @@
 // const mix = require('laravel-mix');
 let mix = require('laravel-mix');
 const path = require('path');
+// require('mix-tailwindcss');
 
 mix.webpackConfig({
 //	plugins: [
@@ -18,6 +19,7 @@ mix.js('resources/js/app.js', 'public/js/app.js')
 		// require('@tailwindcss/postcss'),
 	])
 	// .sass('resources/scss/app.scss', 'public/css/app.css')
+	// .tailwind('./tailwindcss-config.js')
 	// .scripts([
 	// 	'node_modules/chartjs/chart.js',
 	// 	'node_modules/fullcalendar/index.global.js'
@@ -34,6 +36,6 @@ mix.js('resources/js/app.js', 'public/js/app.js')
 	// .autoload({
 	// 	jquery: ['$', 'window.jQuery']
 	// })
-	.copyDirectory('node_modules/fullcalendar', 'public/js/fullcalendar')
-	.copyDirectory('node_modules/chart.js', 'public/js/chart.js')
+	// .copyDirectory('node_modules/fullcalendar', 'public/js/fullcalendar')
+	// .copyDirectory('node_modules/chart.js', 'public/js/chart.js')
 	.sourceMaps();

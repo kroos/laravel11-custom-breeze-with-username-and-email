@@ -33,15 +33,15 @@
 
 
 		<div class="col-sm-12 justify-content-end m-4">
+			<button type="submit" class="btn btn-sm btn-primary m-3">
+				{{ __('Log in') }}
+			</button>
+
 			@if (Route::has('password.request'))
 				<a class="" href="{{ route('password.request') }}">
 					{{ __('Forgot your password?') }}
 				</a>
 			@endif
-
-			<button type="submit" class="btn btn-sm btn-primary m-3">
-				{{ __('Log in') }}
-			</button>
 		</div>
 
 	</form>
