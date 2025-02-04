@@ -38,7 +38,7 @@ class PasswordResetLinkController extends Controller
 		// need to add this for the email login
 		if($input_type == 'email') {
 			// we need to find the username from logins table
-			$usern = User::where([['email', $request->only($input_type)], ['active', 1]])->first()->hasmanylogin->where('active', 1)->first()->username;
+			$usern = User::where('email', $request->only($input_type))->first()->hasmanylogin->first()->username;
 			$request->merge([ 'username' => $usern ]);
 		}
 

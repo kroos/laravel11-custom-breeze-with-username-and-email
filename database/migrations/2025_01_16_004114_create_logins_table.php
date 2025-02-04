@@ -16,9 +16,10 @@ return new class extends Migration
 			$table->foreignId('user_id')->nullable()->index();
 			$table->string('username')->unique();
 			$table->string('password');
-			$table->boolean('active');
+			// $table->boolean('active');
 			$table->rememberToken();
 			$table->timestamps();
+			$table->softDeletes('deleted_at', precision: 0);
 		});
 
 		Schema::create('password_reset_tokens', function (Blueprint $table) {

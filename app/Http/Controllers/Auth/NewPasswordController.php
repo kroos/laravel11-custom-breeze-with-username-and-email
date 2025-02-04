@@ -37,13 +37,13 @@ class NewPasswordController extends Controller
 			'token' => ['required'],
 			'email' => ['required_without:username', 'string', 'email', 'exists:users,email'],
 			'username' => ['required_without:email', 'string', 'exists:logins,username'],
-			'password' => ['required', 'confirmed', Rules\Password::defaults()],
+			'password' => ['required', 'confirmed', Rules\Password::min(6)],
 		]);
 
 		// need to add this for the email login
 		if($input_type == 'email') {
 			// we need to find the username from logins table
-			$usern = User::where([['email', $request->only($input_type)], ['active', 1]])->first()->hasmanylogin->where('active', 1)->first()->username;
+			$usern = User::where('email', $request->only($input_type))->first()->hasmanylogin->first()->username;
 			$request->merge([ 'username' => $usern ]);
 		}
 

@@ -47,7 +47,7 @@ class LoginRequest extends FormRequest
 		// need to add this for the email login
 		if($this->inputType == 'email') {
 			// we need to find the username from logins table
-			$usern = User::where([['email', $this->only($this->inputType)], ['active', 1]])->first()->hasmanylogin->where('active', 1)->first()->username;
+			$usern = User::where('email', $this->only($this->inputType))->first()->hasmanylogin->first()->username;
 			$this->merge([ 'username' => $usern ]);
 		}
 
