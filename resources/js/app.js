@@ -35,6 +35,8 @@ try {
 
 	require('./bootstrapValidator4/js/bootstrapValidator');
 
+	require('./jquery-ui-prefix');
+
 	require('./bootstrap');
 
 	require('./fullcalendar');

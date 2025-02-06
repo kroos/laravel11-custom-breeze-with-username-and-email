@@ -20,9 +20,10 @@ $currentYear = Carbon::now()->year;
 	<link href="" type="image/x-icon" rel="icon" />
 
 	<!-- Styles -->
-	<link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+	<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+	<link href="{{ mix('css/tailwind.css') }}" rel="stylesheet">
 	<!-- Bootswatch Cerulean CSS -->
-	<link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 	<!-- Livewire CSS -->
 	@livewireStyles
 
@@ -37,6 +38,21 @@ $currentYear = Carbon::now()->year;
 		</div>
 
 		<div class="container p-3 row justify-content-center m-0">
+			@isset($header)
+			<div class="tw">
+				<div class="bg-white shadow">
+					<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+						{{ $header }}
+					</div>
+				</div>
+			</div>
+			@endisset
+
+			<!-- Page Content -->
+			@isset($slot)
+				<div class="tw">{{ $slot }}</div>
+			@endisset
+
 			@yield('content')
 		</div>
 

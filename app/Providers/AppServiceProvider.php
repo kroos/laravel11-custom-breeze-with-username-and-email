@@ -38,8 +38,8 @@ class AppServiceProvider extends ServiceProvider
 		// https://laravel.com/docs/11.x/passwords#resetting-the-password
 		// ResetPassword::createUrlUsing(function (User $user, string $token) {
 		ResetPassword::createUrlUsing(function (Login $login, string $token) {
-				// return 'https://example.com/reset-password?token='.$token;
-				return url('reset-password', ['token' => $token]);
+			// return 'https://example.com/reset-password?token='.$token;
+			return url('reset-password', ['token' => $token]);
 		});
 	}
 }

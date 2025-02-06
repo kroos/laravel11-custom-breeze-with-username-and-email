@@ -95,10 +95,8 @@ class EloquentUserProvider extends UserProvider
 		return $rememberToken && hash_equals($rememberToken, $token) ? $retrievedModel : null;
 	}
 
-
-
-//	public function validateCredentials(UserContract $user, array $credentials)
-//	{
+	public function validateCredentials(UserContract $user, #[\SensitiveParameter] array $credentials)
+	{
 //		$plain = $credentials['password'];
 //		// dd($plain, $credentials['password']);
 //		// this is for plain text user password
@@ -110,10 +108,8 @@ class EloquentUserProvider extends UserProvider
 //		// }
 //		dd($this->hasher->check($plain, $user->getAuthPassword()));
 //		return ($this->hasher->check($plain, $user->getAuthPassword()) && $user->belongstouser->status == true);
-//	}
 
-	public function validateCredentials(UserContract $user, #[\SensitiveParameter] array $credentials)
-	{
+
 		// dd($credentials['password'], $user->getAuthPassword(), $this->hasher->check($credentials['password'], $user->getAuthPassword()), $this->hasher->info($user->getAuthPassword()), $this->hasher->make($credentials['password']));
 		if (is_null($plain = $credentials['password'])) {
 			return false;

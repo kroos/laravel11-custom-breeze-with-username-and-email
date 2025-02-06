@@ -20,6 +20,7 @@ Integration with module below :
  - **[@fullcalendar/multimonth]**
  - **[@fullcalendar/timegrid]**
  - **[@mdi/font]**
+ - **[@tailwindcss/forms]**
  - **[alpinejs]**
  - **[animate.css]**
  - **[axios]**
@@ -41,6 +42,7 @@ Integration with module below :
  - **[select2-bootstrap-5-theme]**
  - **[sweetalert2]**
  - **[laravel-mix]**
+ - **[tailwindcss]**
 
 ## License
 

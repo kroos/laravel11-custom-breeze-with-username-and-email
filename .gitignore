@@ -30,3 +30,4 @@ yarn-error.log
 /public/fonts
 /public/images
 /public/css/bootstrap.css
+/public/mix-manifest.json

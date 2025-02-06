@@ -1,10 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- <div class="col-sm-12 d-flex flex-column align-items-center text-center"> --}}
+<!-- <div class="col-sm-12 d-flex flex-column align-items-center text-center"> -->
 <div class="col-sm-12 row justify-content-center m-0 text-center">
+
 	<div class="col-sm-8 row justify-content-center align-items-center m-2 border border-success">
 		<h1 class="text-center animate__animated animate__bounce">An animated element</h1>
+	</div>
+
+	<div class="col-sm-8 row text-center align-items-center m-2 border border-success">
+		<div class="tw">
+			<p class="text-3xl font-bold underline">Hello tailwindcss</p>
+			<button class="btn btn-primary">Bootstrap Button</button>
+		</div>
+		<p>If you want to use tailwindcss class, please wrap it with "tw" class. This has been made to resolve conflicts between bootstrap and tailwindcss</p>
+		<p>{{ __('<div class="tw"><p class="text-3xl font-bold underline">Hello tailwindcss</p></div>') }}</p>
 	</div>
 
 	<div class="col-sm-8 row justify-content-center align-items-center m-2 border border-success">
