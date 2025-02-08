@@ -24,7 +24,9 @@
 			@if (Route::has('login'))
 				@auth
 					<div class="dropdown me-5">
-						<a href="{{ url('/dashboard') }}" class="btn btn-sm btn-outline-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->belongstouser->name }}</a>
+						<a href="#" class="btn btn-sm btn-outline-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ Auth::user()->belongstouser->name }}
+            </a>
 						<ul class="dropdown-menu">
 							<li>
 								<a class="dropdown-item" href="{{ route('profile.edit') }}"><i class="fa-regular fa-user"></i> Profile</a>
